@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CaioLabs - Static Site Test</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>CaioLabs</h1>
+    <p class="tagline">A simple static site for GitHub Pages testing</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Welcome</h2>
+      <p>
+        This is a sample static website used to validate GitHub Pages
+        deployments. It uses plain HTML, CSS, and JavaScript with no build step.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Live Counter</h2>
+      <p>Click the button to test that JavaScript is loading correctly.</p>
+      <button id="clickButton" type="button">Clicked <span id="count">0</span> times</button>
+    </section>
+
+    <section class="card">
+      <h2>Sample Data</h2>
+      <p>A small list rendered dynamically from JavaScript:</p>
+      <ul id="itemList" class="item-list"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built for testing &middot; <span id="buildYear"></span> CaioLabs</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

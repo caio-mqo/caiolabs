@@ -24,31 +24,110 @@ body {
   flex-direction: column;
 }
 
+/* ---------- Header ---------- */
 .site-header {
-  text-align: center;
-  padding: 3rem 1rem 2rem;
   background: linear-gradient(180deg, var(--surface), var(--bg));
   border-bottom: 1px solid var(--border);
+  padding-top: 2.5rem;
+}
+
+.header-inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.identity {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.avatar {
+  flex: 0 0 auto;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
+  letter-spacing: 0.5px;
 }
 
 .site-header h1 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   letter-spacing: -0.5px;
 }
 
-.tagline {
-  color: var(--muted);
-  margin-top: 0.5rem;
+.title {
+  color: var(--text);
+  font-weight: 600;
+  margin-top: 0.15rem;
 }
 
+.subtitle {
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.location {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin-top: 0.15rem;
+}
+
+/* ---------- Tabs ---------- */
+.tabs {
+  max-width: 820px;
+  margin: 1.5rem auto 0;
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.25rem;
+}
+
+.tab {
+  appearance: none;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab:hover {
+  color: var(--text);
+}
+
+.tab[aria-selected="true"] {
+  color: var(--text);
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Layout ---------- */
 .container {
   flex: 1;
   width: 100%;
-  max-width: 720px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 2rem 1rem;
   display: grid;
   gap: 1.5rem;
+}
+
+.panel {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.panel[hidden] {
+  display: none;
 }
 
 .card {
@@ -59,43 +138,198 @@ body {
 }
 
 .card h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   font-size: 1.25rem;
 }
 
-button {
-  margin-top: 0.75rem;
-  padding: 0.6rem 1.2rem;
-  font-size: 1rem;
-  color: #fff;
-  background-color: var(--accent);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.15s ease-in-out;
+.card > p {
+  color: var(--text);
 }
 
-button:hover {
-  background-color: var(--accent-hover);
+.muted {
+  color: var(--muted);
 }
 
-.item-list {
+/* ---------- Skill chips ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.chip {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background-color: var(--bg);
+  font-size: 0.85rem;
+  color: var(--text);
+}
+
+/* ---------- Certifications ---------- */
+.cert-list {
   list-style: none;
-  margin-top: 0.5rem;
+  display: grid;
+  gap: 0.5rem;
 }
 
-.item-list li {
+.cert-list li {
   padding: 0.5rem 0.75rem;
   border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
   border-radius: 8px;
-  margin-bottom: 0.5rem;
   background-color: var(--bg);
 }
 
+/* ---------- Timeline ---------- */
+.timeline {
+  list-style: none;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--border);
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.4rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface);
+}
+
+.tl-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+
+.tl-head h3 {
+  font-size: 1.05rem;
+}
+
+.tl-dates {
+  color: var(--muted);
+  font-size: 0.85rem;
+  white-space: nowrap;
+}
+
+.tl-org {
+  color: var(--accent);
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.timeline-item ul {
+  list-style: none;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.timeline-item ul li {
+  position: relative;
+  padding-left: 1rem;
+  color: var(--text);
+  font-size: 0.95rem;
+}
+
+.timeline-item ul li::before {
+  content: "▸";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+/* ---------- Languages ---------- */
+.lang-list {
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.lang-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--bg);
+}
+
+/* ---------- Contact ---------- */
+.contact-list {
+  list-style: none;
+  display: grid;
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.contact-list li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  align-items: baseline;
+}
+
+.contact-label {
+  color: var(--muted);
+  font-size: 0.85rem;
+  min-width: 80px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.cta {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  color: #fff;
+  background-color: var(--accent);
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background-color 0.15s ease-in-out;
+}
+
+.cta:hover {
+  background-color: var(--accent-hover);
+  text-decoration: none;
+}
+
+/* ---------- Footer ---------- */
 .site-footer {
   text-align: center;
   padding: 1.5rem 1rem;
   color: var(--muted);
   border-top: 1px solid var(--border);
   font-size: 0.9rem;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 520px) {
+  .identity {
+    flex-direction: column;
+    text-align: center;
+  }
+  .tabs {
+    justify-content: center;
+  }
+  .site-header h1 {
+    font-size: 1.6rem;
+  }
 }

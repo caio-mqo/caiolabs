@@ -3,39 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CaioLabs - Static Site Test</title>
+  <title>Caio Oliveira &middot; Resume</title>
+  <meta name="description" content="Online resume of Caio Oliveira — DevOps Engineer, Support Engineer, Kubernetes (CKA/CKAD), based in Amsterdam.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header class="site-header">
-    <h1>CaioLabs</h1>
-    <p class="tagline">Another simple static site for GitHub Pages testing</p>
+    <div class="header-inner">
+      <div class="identity">
+        <div class="avatar" aria-hidden="true">CO</div>
+        <div>
+          <h1>Caio Oliveira</h1>
+          <p class="title">DevOps Engineer &middot; Support Engineer</p>
+          <p class="subtitle">Kubernetes [CKA/CKAD] &middot; Virtualization &middot; Linux &middot; Networking [CCNA]</p>
+          <p class="location">Amsterdam, North Holland, Netherlands</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="tabs" aria-label="Resume sections">
+      <button class="tab" type="button" data-tab="career" aria-selected="true">Career</button>
+      <button class="tab" type="button" data-tab="education" aria-selected="false">Education</button>
+      <button class="tab" type="button" data-tab="contact" aria-selected="false">Contact</button>
+    </nav>
   </header>
 
   <main class="container">
-    <section class="card">
-      <h2>Welcome</h2>
-      <p>
-        This is a sample static website used to validate GitHub Pages
-        deployments. It uses plain HTML, CSS, and JavaScript with no build step.
-      </p>
+    <!-- ============ CAREER ============ -->
+    <section class="panel" id="career" role="tabpanel">
+      <div class="card">
+        <h2>Summary</h2>
+        <p>
+          Engineer with broad experience in customer support and services, both on-site
+          and remote. Passionate about learning new technologies and reducing wasted
+          effort through Lean methodology. Currently focused on DevOps and Infrastructure.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Core Skills</h2>
+        <div class="chips">
+          <span class="chip">Kubernetes</span>
+          <span class="chip">Terraform</span>
+          <span class="chip">Ansible</span>
+          <span class="chip">AWS</span>
+          <span class="chip">Azure</span>
+          <span class="chip">GCP</span>
+          <span class="chip">Docker</span>
+          <span class="chip">Git</span>
+          <span class="chip">CI/CD</span>
+          <span class="chip">Rancher</span>
+          <span class="chip">Linux &amp; Windows Admin</span>
+          <span class="chip">VMware</span>
+          <span class="chip">Networking</span>
+          <span class="chip">Troubleshooting</span>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Certifications</h2>
+        <ul class="cert-list">
+          <li>Certified Kubernetes Administrator (CKA)</li>
+          <li>Certified Kubernetes Application Developer (CKAD)</li>
+          <li>Cisco Certified Network Associate (CCNA)</li>
+          <li>GitHub Foundations</li>
+          <li>Lean Bronze Certification</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Enterprise Support Engineer</h3>
+              <span class="tl-dates">May 2026 &ndash; Present</span>
+            </div>
+            <p class="tl-org">GitHub &middot; Amsterdam</p>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Tech Multiplier &middot; Enterprise Senior Support Engineer</h3>
+              <span class="tl-dates">Jan 2025 &ndash; Oct 2025</span>
+            </div>
+            <p class="tl-org">Atlassian &middot; Amsterdam, Netherlands</p>
+            <ul>
+              <li>Handled internal escalations for a team of 15 engineers.</li>
+              <li>Guided engineers on improving the customer experience.</li>
+              <li>Reviewed support tickets through the case-review process.</li>
+              <li>Mentored peers to build proficiency across Confluence Cloud segments.</li>
+              <li>Shared knowledge and best practices with Tech Multipliers in other regions.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Enterprise Senior Support Engineer</h3>
+              <span class="tl-dates">Dec 2022 &ndash; Dec 2024</span>
+            </div>
+            <p class="tl-org">Atlassian &middot; Amsterdam, Netherlands</p>
+            <ul>
+              <li>Senior support for Enterprise customers using Confluence Cloud.</li>
+              <li>Handled critical tickets daily and managed customer relationships.</li>
+              <li>Empowered customers with knowledge through guided meetings.</li>
+              <li>Worked with Confluence &amp; Jira Cloud REST APIs, Splunk queries, SQL reports, and Confluence Automation.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>SUSE Rancher Support Engineer</h3>
+              <span class="tl-dates">Apr 2022 &ndash; Oct 2022</span>
+            </div>
+            <p class="tl-org">SUSE</p>
+            <ul>
+              <li>Provided NeuVector and Harvester technical support across diverse businesses.</li>
+              <li>Supported install, configuration, and troubleshooting on Rancher, OpenShift, and Kubernetes.</li>
+              <li>Worked with Docker, Containerd, K3s, Helm, and manifest deployments on AWS, GCP, Azure, and bare metal.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Senior Remote Support Engineer</h3>
+              <span class="tl-dates">Apr 2021 &ndash; Apr 2022</span>
+            </div>
+            <p class="tl-org">Rockwell Automation &middot; São Paulo, Brazil</p>
+            <ul>
+              <li>Infrastructure support and monitoring team.</li>
+              <li>Windows (AD, DHCP, DNS) and Linux administration and deployments.</li>
+              <li>VMware administration (ESXi, vCenter, vMotion, vSAN).</li>
+              <li>Hardware and alarm monitoring (Dell, HP, Cisco, switches, SANs) plus switch configuration.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Remote Support Engineer</h3>
+              <span class="tl-dates">May 2019 &ndash; Apr 2021</span>
+            </div>
+            <p class="tl-org">Rockwell Automation &middot; São Paulo, Brazil</p>
+            <ul>
+              <li>Remote monitoring and troubleshooting of data center infrastructure and networks for global customers.</li>
+              <li>Collaborated on development and support of MES applications.</li>
+              <li>Built a customer web portal (HTML, JavaScript, CSS, Java, PHP, SQL).</li>
+              <li>Windows, Linux, and VMware administration.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Network Consultant</h3>
+              <span class="tl-dates">Nov 2018 &ndash; May 2019</span>
+            </div>
+            <p class="tl-org">Rockwell Automation</p>
+            <ul>
+              <li>Consulted on industrial networks and virtualization projects.</li>
+              <li>Implemented network topologies and logical segregation; configured Cisco and Hirschmann switches.</li>
+              <li>Deployed Industrial Data Centers (IDC) and configured VMware environments and hosts.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Field Service Engineer</h3>
+              <span class="tl-dates">Jan 2016 &ndash; Nov 2018</span>
+            </div>
+            <p class="tl-org">Rockwell Automation</p>
+            <ul>
+              <li>Provided field support for Rockwell Automation products (PLC, controllers, HMIs, Logix, FactoryTalk View).</li>
+              <li>Commissioning and startup support.</li>
+              <li>Cisco products and industrial network configuration and troubleshooting.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Potential Engineer (Internship)</h3>
+              <span class="tl-dates">Jan 2015 &ndash; Jan 2016</span>
+            </div>
+            <p class="tl-org">Rockwell Automation &middot; São Paulo</p>
+            <ul>
+              <li>Job-rotation program across Services, Projects, MCC Engineering, Sales, and Customer Care.</li>
+              <li>Worked with supervisors and managers to solve business-unit problems.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Intern &middot; iXR Mobile Systems</h3>
+              <span class="tl-dates">Sep 2013 &ndash; Feb 2014</span>
+            </div>
+            <p class="tl-org">Philips &middot; Best</p>
+            <ul>
+              <li>Collaborated with the FPGA research group.</li>
+              <li>Built a proof-of-concept signal-multiplexing prototype (Xilinx Spartan-6, VHDL/C) to reduce cabling in mobile X-ray machines.</li>
+            </ul>
+          </li>
+
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Instrumentation Technician</h3>
+              <span class="tl-dates">Jan 2009 &ndash; Mar 2011</span>
+            </div>
+            <p class="tl-org">Sense Eletronica Ltda</p>
+            <ul>
+              <li>Application Engineering department: customer technical support by email and phone.</li>
+              <li>Startup and commissioning support for ASi/DeviceNet/Profibus-DP networks.</li>
+              <li>Prepared quotes and technical proposals for valve positioning sensors and indicators.</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Live Counter</h2>
-      <p>Click the button to test that JavaScript is loading correctly.</p>
-      <button id="clickButton" type="button">Clicked <span id="count">0</span> times</button>
+    <!-- ============ EDUCATION ============ -->
+    <section class="panel" id="education" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Education</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Engineer's Degree &middot; Mechatronics, Robotics &amp; Automation</h3>
+              <span class="tl-dates">2009 &ndash; 2015</span>
+            </div>
+            <p class="tl-org">Universidade Federal do ABC</p>
+          </li>
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Engineer's Degree &middot; Mechatronics &amp; Robotics</h3>
+              <span class="tl-dates">2013 &ndash; 2014</span>
+            </div>
+            <p class="tl-org">Fontys Hogescholen</p>
+          </li>
+          <li class="timeline-item">
+            <div class="tl-head">
+              <h3>Technical Course &middot; Industrial Automation</h3>
+              <span class="tl-dates">2007 &ndash; 2008</span>
+            </div>
+            <p class="tl-org">Instituto Federal de Educação, Ciência e Tecnologia de São Paulo (IFSP)</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card">
+        <h2>Languages</h2>
+        <ul class="lang-list">
+          <li><span>English</span><span class="muted">Native / Bilingual</span></li>
+          <li><span>Portuguese</span><span class="muted">Native / Bilingual</span></li>
+          <li><span>Spanish</span><span class="muted">Professional Working</span></li>
+        </ul>
+      </div>
     </section>
 
-    <section class="card">
-      <h2>Sample Data</h2>
-      <p>A small list rendered dynamically from JavaScript:</p>
-      <ul id="itemList" class="item-list"></ul>
+    <!-- ============ CONTACT ============ -->
+    <section class="panel" id="contact" role="tabpanel" hidden>
+      <div class="card">
+        <h2>Get in touch</h2>
+        <p>Feel free to reach out or connect with me online.</p>
+        <ul class="contact-list">
+          <li>
+            <span class="contact-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/caiomaciel/" target="_blank" rel="noopener noreferrer">linkedin.com/in/caiomaciel</a>
+          </li>
+          <li>
+            <span class="contact-label">Location</span>
+            <span>Amsterdam, North Holland, Netherlands</span>
+          </li>
+        </ul>
+        <a class="cta" href="https://www.linkedin.com/in/caiomaciel/" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>Built for testing &middot; <span id="buildYear"></span> CaioLabs</p>
+    <p>&copy; <span id="buildYear"></span> Caio Oliveira</p>
   </footer>
 
   <script src="script.js"></script>
